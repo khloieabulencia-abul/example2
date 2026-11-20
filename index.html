@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweet Nook – Chibi Cake Café</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="title" class="screen on">
+  <div class="cakes" aria-hidden="true"><canvas width="110" height="90"></canvas><canvas width="110" height="90"></canvas><canvas width="110" height="90"></canvas></div>
+  <h1>Sweet Nook</h1>
+  <p class="sub">Bake, serve, and keep every customer smiling.</p>
+  <button id="playBtn" class="big">Play</button>
+</section>
+
+<section id="pick" class="screen">
+  <h2>Pick your baker</h2>
+  <div class="row">
+    <canvas id="prev" width="220" height="250"></canvas>
+    <div class="opts">
+      <div><label>Gender</label><div class="grp" id="o-gender"><button data-g="girl" class="sel">Girl</button><button data-g="boy">Boy</button></div></div>
+      <div><label>Skin</label><div class="grp" id="o-skin"></div></div>
+      <div><label>Hair style</label><div class="grp" id="o-style"></div></div>
+      <div><label>Hair color</label><div class="grp" id="o-hair"></div></div>
+      <div><label>Outfit color</label><div class="grp" id="o-outfit"></div></div>
+    </div>
+  </div>
+  <button id="startBtn" class="big">Start baking</button>
+</section>
+
+<section id="game" class="screen">
+  <div id="hud"><span class="hearts" id="hLives"></span><span>Score <b id="hScore">0</b></span><span>Level <b id="hLevel">1</b></span><span id="hCombo"></span></div>
+  <div id="coach"><p id="coachTxt"></p><button class="go" id="coachNext">Next</button><button class="ghost" id="skip">Skip tutorial</button></div>
+  <canvas id="cv" width="800" height="460" aria-label="Cake shop counter"></canvas>
+  <div id="tray"></div>
+</section>
+
+<section id="over" class="screen">
+  <h2>The shop is closed for today</h2>
+  <p>Score: <b id="oScore">0</b></p>
+  <p>Cakes served: <b id="oServed">0</b></p>
+  <p>Best score: <b id="oBest">0</b></p>
+  <button id="againBtn" class="big">Play again</button>
+  <button id="changeBtn" class="ghost">Change baker</button>
+</section>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
